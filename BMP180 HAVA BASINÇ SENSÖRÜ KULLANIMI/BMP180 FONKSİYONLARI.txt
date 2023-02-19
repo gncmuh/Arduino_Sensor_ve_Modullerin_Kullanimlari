@@ -1,0 +1,20 @@
+BMP180 sensörünün SFE_BMP180.h kütüphanesinin fonksiyonları
+
+	-->startTemperature()  --> sıcaklık ölçümünü başlatır.
+	
+	-->getTemperature(double sicaklik) --> fonksiyonun parametresi double veri tipinde olmalıdır sicaklik okumalarını verini içerisine 
+											yazar
+											
+	-->startPressure(0-3) --> Basınç ölçümünü başlatır fonksiyon 0 ile 3 arasında bir değer olur bu değerin anlamı çözünürlüktür kısaca
+								örnekleme sayısı aralığıdır smoothing benzeri bir işlem olarak görülebilir.
+								çıktı olarak sistemin örnek sonucunu almak için ne kadar süre beklememiz gerektiğinin ms cinsinden verir.
+								
+	-->getPressure(P,T) -->  Bu fonksiyon başınç ölçümünün hesabı için iki adet parametre alır bunlar P basınç T ise sıcaklıktır.Burada ki
+							 sıcaklık değeri bir önceki fonksiyondan ölçülen değeri temsil etmektedir basınç ise üzerine hesaplanan basınç
+							 değerini double veri tipinde aktarır.
+	
+	-->p0=seaLevel(p,Bulunan bölgenin rakımı)  --> deniz seviyesindeki basınç değerini aktarır. p0 atanan değişkendir(double olmalıdır)
+	
+	-->=rakim=Altitued(p,p0= --> Bulunduğumuz bölgenin rakımını öğrenmemizi sağlayan fonksiyondur. P ve P0 değerleri yukarıdaki değerlerdir.,
+								rakim değişkenine ölçülen değer aktarılır.(double veri tipinde olmalıdır)
+								
